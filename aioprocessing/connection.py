@@ -8,6 +8,7 @@ __all__ = ["AioConnection"]
 
 
 class AioConnection(metaclass=CoroBuilder):
+    pool_workers = 1
     coroutines = [
         "recv",
         "poll",
